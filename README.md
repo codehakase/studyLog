@@ -3,9 +3,15 @@ A Study Log Web Application I built to log my progress during self created strea
 ![studylog](https://user-images.githubusercontent.com/9336187/27025236-b28db472-4f51-11e7-825b-3d8fa2440af4.png)
 
 ## Usage
-The main Concept of this is to create **Streaks**. Streaks are days related to a specific tag. The App allows one Log *Once* per day.
+The main Concept of this app, is to create **Streaks**. Streaks are days related to a specific tag. The App allows one Log *Once* per day.
 
 ## Config
+* Clone or download the Repo to your local Machine
+    ```bash
+    git clone git@github.com:codehakase/studyLog.git //SSH or
+    
+    git clone https://github.com/codehakase/studyLog.git //HTTPS
+
 * create a `.env` file from the `.env.example` and update the environment variable with your details:
     ```env
     DB_CONNECTION=YOUR_DATABASE_DB_CONNECTION
