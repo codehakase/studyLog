@@ -15,6 +15,10 @@ Route::get('/', function () {
     return view('welcome');
 });
 
+/**
+ * Logs Routes
+ */
+
 Route::get('new_log', 'LogsController@newLog');
 Route::post('new_log', 'LogsController@storeLog');
 
@@ -24,6 +28,12 @@ Route::get('logs/{log}', 'LogsController@showSingle');
 Route::get('profile', 'UserController@index');
 Route::post('profile/edit', 'UserController@edit');
 Route::post('profile/password', 'UserController@password');
+
+// Tasks Routes
+Route::get('tasks', 'TaskController@index');
+Route::post('task', 'TaskController@save');
+Route::delete('task/{task}', 'TaskController@destroy');
+Route::put('task/{task}', 'TaskController@done');
 
 Auth::routes();
 

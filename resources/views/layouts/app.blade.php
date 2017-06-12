@@ -19,6 +19,11 @@
             'csrfToken' => csrf_token(),
         ]) !!};
     </script>
+     <style>
+        .done {
+            text-decoration: line-through !important;
+        }
+    </style>
 </head>
 <body>
     <div id="app">
@@ -53,7 +58,8 @@
                             <li><a href="{{ route('login') }}">Login</a></li>
                             <li><a href="{{ route('register') }}">Register</a></li>
                         @else
-                            <li><a href="{{ url('/home')}}">Dashboard</a></li>                        
+                            <li><a href="{{ url('/home')}}">Dashboard</a></li>                       
+                            <li><a href="{{ url('/tasks')}}">Tasks</a></li>                       
                             <li><a href="{{ url('reports')}}">Reports</a></li>                        
                             <li class="dropdown">
                                 <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">
