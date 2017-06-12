@@ -44,8 +44,7 @@ The main Concept of this is to create **Streaks**. Streaks are days related to a
 * *Homestead, Valet* - Optional
 * *Built-in Server*
 
-## Live version
-Check the Live version of this app [HERE](https://c-studylog.herokuapp.com)
+
 ## Contributing 
 Please feel free to fork this repo and contribute by submitting a pull request to add features, or to make some corrections to them.
 
