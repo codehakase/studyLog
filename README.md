@@ -5,6 +5,34 @@ A Study Log Web Application I built to log my progress during self created strea
 ## Usage
 The main Concept of this is to create **Streaks**. Streaks are days related to a specific tag. The App allows one Log *Once* per day.
 
+## Config
+* create a `.env` file from the `.env.example` and update the environment variable with your details:
+    ```env
+    DB_CONNECTION=YOUR_DATABASE_DB_CONNECTION
+    DB_HOST=YOUR_DB_HOSST
+    DB_PORT=YOUR_DB_PORT
+    DB_DATABASE=DATABASE_TO_CONNECT_TO
+    DB_USERNAME=DB_USERNAME
+    DB_PASSWORD=DB_PASSWORD
+    .....
+    
+    ```
+* Install the required packages
+  ```bash
+  composer install
+  ```
+  
+* Run Migrations from your Terminal
+    ```bash
+    php artisan migrate
+    ```
+* Serve up your application
+   ```bash
+   php artisan serve
+   ```
+
+
+
 ## TODOs
 * Notification on end of Streak
 * Tags History
