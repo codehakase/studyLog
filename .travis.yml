@@ -8,4 +8,5 @@ before_script:
   - composer install --no-interaction
 
 script:
+- php artisan key:generate
 - vendor/bin/phpunit
