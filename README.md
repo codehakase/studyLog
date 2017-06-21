@@ -2,6 +2,8 @@
 A Study Log Web Application I built to log my progress during self created streaks.
 ![studylog](https://user-images.githubusercontent.com/9336187/27025236-b28db472-4f51-11e7-825b-3d8fa2440af4.png)
 
+> Live Version coming soon!
+
 ## Usage
 The main Concept of this app, is to create **Streaks**. Streaks are days related to a specific tag. The App allows one Log *Once* per day.
 
