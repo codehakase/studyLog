@@ -57,6 +57,12 @@ class TaskController extends Controller
         return redirect('tasks')->with("status", "Task Created Successfully!");
     }
 
+    /**
+     * Deletes a given task
+     * @param  Request $request
+     * @param  Task $task
+     * @return void
+     */
     public function destroy(Request $request, Task $task)
     {
         $this->authorize('destroy', $task);
@@ -64,6 +70,12 @@ class TaskController extends Controller
         return redirect('tasks')->with("status", "Task deleted successfully!");
     }
 
+    /**
+     * Marks a task as done
+     * @param  Request $request
+     * @param  Task $task
+     * @return viod
+     */
     public function done(Request $request, Task $task)
     {
         $this->authorize('destroy', $task);
