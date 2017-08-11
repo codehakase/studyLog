@@ -12,9 +12,10 @@ class LogsController extends Controller
 {
     public function index()
     {
-        $tag = Tags::where('user_id', Auth::user()->id)->firstOrFail();
+        $tag = Tags::where('user_id', Auth::user()->id)->first();
         $logs = Log::latest()->paginate(10);
         $total_hours = Log::selectRaw("SUM(hours_spent) as hours")->get();
+        
         return view('home', compact('logs', 'total_hours', 'tag'));
     }
 
@@ -24,9 +25,11 @@ class LogsController extends Controller
         // checks
         if (Log::get()) {
             $lastLog = Log::latest()->first();
-            $last_log_date = explode(' ', $lastLog->created_at);
-            if ($last_log_date[0] == date('Y-m-d')) {
-                return redirect('home')->with("error", "Sorry! You can only add a new Log once a day");
+            if($lastLog){   
+                $last_log_date = explode(' ', $lastLog->created_at);
+                if ($last_log_date[0] == date('Y-m-d')) {
+                    return redirect('home')->with("error", "Sorry! You can only add a new Log once a day");
+                }
             }
         }
         return view('sLogs.create');

@@ -7,26 +7,30 @@
             <div class="panel panel-default">
                 <div class="panel-heading">Dashboard</div>
                     @include('includes.flash')
+                    @if($tag)
                     <div class="col-md-3">
                         {{ (count($logs) > 0) ? count($logs) : 0}} of {{ $tag->streak }} days logged
                     </div>
                     <div class="col-md-3">
                         <b>Tag: #{{ $tag->tag }}</b>
                     </div>
+                    @endif
                 <div class="col-md-6 col-md-offset-8 text-center">
 
                     <h2>Total Hours</h2>
-                    @if( isset($total_hours) )
+                    
+                    @if($total_hours->first->hours)
                         @foreach ($total_hours as $hour)
                             <h3> {{ number_format($hour->hours, 2) }} </h3>
                             <p>Avg: {{ number_format($hour->hours / count($logs), 2) }}hrs / Week</p>
                         @endforeach
                     @else<div class="col-md-6">
-                        {{ (count($logs) > 0) ? count($logs) : 0}} of 42 days logged
+                        {{ (count($logs) > 0) ? count($logs) : 0}} days logged
                     </div>
-                        <h3>0.00</h3>                        
+                                            
                     @endif
                 </div>
+                
 
                 <div class="panel-body">
 
