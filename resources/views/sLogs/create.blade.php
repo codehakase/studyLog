@@ -86,9 +86,10 @@
 
                         <div class="form-group">
                             <div class="col-md-6 col-md-offset-4">
-                                <button type="submit" class="btn btn-primary">
+                                <button type="submit" class="btn btn-success">
                                     <i class="fa fa-btn fa-ticket"></i> Add Log
                                 </button>
+                                <a href="{{ url('/home') }}" class="btn btn-md btn-info">Dashboard</a>
                             </div>
                         </div>
                     </form>
