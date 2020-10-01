@@ -14,7 +14,7 @@ The main Concept of this app, is to create **Streaks**. Streaks are days related
     
     git clone https://github.com/codehakase/studyLog.git //HTTPS
 
-* create a `.env` file from the `.env.example` and update the environment variable with your details:
+* Create a `.env` file from the `.env.example` and update the environment variable with your details:
     ```env
     DB_CONNECTION=YOUR_DATABASE_DB_CONNECTION
     DB_HOST=YOUR_DB_HOSST
